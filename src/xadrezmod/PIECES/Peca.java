@@ -7,12 +7,12 @@ public abstract class Peca {
     Color cor;
     private int pogX;
     private int pogY;
-    private String imagem; //colocar imagem referente a cada peça
+    private String imagem;
     private Movimentacao mov;
     private boolean selected = false;
     private Tabuleiro tabuleiro;
     
-    public abstract boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY); //conferir movimento de cada peça
+    public abstract boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY);
     
     //getters & setters
     
