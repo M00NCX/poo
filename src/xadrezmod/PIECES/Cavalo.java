@@ -1,7 +1,5 @@
 package xadrezmod.PIECES;
 
-import xadrezmod.Posicao;
-
 public class Cavalo extends Peca {
     
     public Cavalo (int pogX, int pogY, Color cor) {

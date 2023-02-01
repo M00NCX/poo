@@ -23,8 +23,4 @@ public class Torre extends Peca{
             return false;
         }
     }
-
-    public String getResource(String torrebrancOpng) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

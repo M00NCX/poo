@@ -5,7 +5,7 @@ public final class Tabuleiro
 {
     private Peca end[][];
     private Color jogadorDaVez = Color.WHITE;
-    public static final int tempoDeMovimento = 20000; //20s para cada jogada
+    public static final int tempoDeMovimento = 20000;
     private Peca selecionada = null;
     
     public Tabuleiro() 
@@ -111,25 +111,6 @@ public final class Tabuleiro
       this.end[peca.getPogX()][peca.getPogY()] = null;
       peca.setTabuleiro(this);  
   }
-
-  /*public boolean checkEnd( int xi, int yi, int xf, int yf)
-  {
-     if(this.end[xf][yf].isOcupado() == false){
-         System.out.println("Movimento permitido");
-         return true;
-     }
-     else
-     {
-         if(this.end[xi][yi].get.getCor() == this.end[xf][yf].getPeca().getCor())
-         {
-             System.out.println("Tentando comer o amigo??????????");
-             return false;
-         }else{
-             System.out.println("Vc capturou uma peca inimiga!");
-             return true;
-         }
-     }
-    }*/
   
  public void playerT(){//mudando de jogador
      if(this.jogadorDaVez.equals(Color.WHITE)){
@@ -149,50 +130,7 @@ public final class Tabuleiro
     void Jogada(int i, int j) {
         Peca peca = this.getEnd(i, j);
     }
-
-    /**
-     */
-    /*public void setEnd(Peca peca, boolean ocup) 
-    {
-        this.end[peca.getPogX()][peca.getPogY()].setPeca(peca);
-        this.end[peca.getPogX()][peca.getPogY()].setOcupado(ocup);
-    }*/
-      
     
   
 }    
 
-   /* public static Tabuleiro tabuleiro = new Tabuleiro ();
-    int [][]square = new int[8][8]; //criação da matriz
-    char a = 65; //letra a em ASCII
-    char h = 72; //letra h
-    public void printTab(){
-        System.out.print("#  ");
-        for(int c=0 ; c<8 ; c++){
-                System.out.printf("%c  ", a); //printar as letras na parte superior
-                a++;
-        }
-        System.out.println("");
-    
-        for(int i=0 ; i<8 ; i++){
-                System.out.print((i+1)+" "); //printar os numeros na lateral esquerda
-                for(int j=0 ; j<8 ; j++){				
-                        System.out.print("[" + square[i][j] + "]");				
-                        if(j == 7){					
-                                System.out.println(""); //"quebrar a matriz"
-                        }				
-                }
-        }
-        System.out.print("#  ");
-        for(int b=0 ; b<8 ; b++){
-                System.out.printf("%c  ", h);//printar as letras na parte inferior
-                h--;
-        }
-        System.out.println("");
-    }
-    
-    //printar os numeros na lateral direita
-
-    public static void main(String [] args){			
-        tabuleiro.printTab();	
-    }*/
