@@ -10,7 +10,7 @@ public class Bispo extends Peca{
     }
     
     @Override
-    public boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY)
+    public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY)
     {
         int difX = Math.abs(poginX-pogfinX);
         int difY = Math.abs(poginY-pogfinY);

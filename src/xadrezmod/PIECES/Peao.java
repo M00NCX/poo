@@ -11,7 +11,7 @@ public class Peao extends Peca implements MovimentosEspeciais{
     }
         
     @Override
-    public boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY){
+    public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY){
         if((poginY - pogfinY)==1){
             System.out.println("Movimento permitido");
             return true;
@@ -24,10 +24,10 @@ public class Peao extends Peca implements MovimentosEspeciais{
     @Override
     public boolean primeiroMov(Color cor) {
         cor = this.getCor();
-        if(this.movimento(6, this.getPogY(), 4, this.getPogY())&&cor.equals(BLACK)){
+        if(this.movimentar(6, this.getPogY(), 4, this.getPogY())&&cor.equals(BLACK)){
          return true;   
         }
-        else if(this.movimento(1, this.getPogY(), 3, this.getPogY())&&cor.equals(WHITE)){
+        else if(this.movimentar(1, this.getPogY(), 3, this.getPogY())&&cor.equals(WHITE)){
             return true;
         }
         return false;

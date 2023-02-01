@@ -10,7 +10,7 @@ public class Cavalo extends Peca {
     }
     
     @Override
-    public boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY)
+    public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY)
     {
         if( ((poginX -pogfinX) == 1 && (poginY - pogfinY) ==2) || ((poginX - pogfinX)==2 && (poginY - pogfinY)==1) )
         {

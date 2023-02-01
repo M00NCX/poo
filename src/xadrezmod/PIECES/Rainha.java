@@ -10,7 +10,7 @@ public class Rainha extends Peca{
     }
     
         @Override
-    public boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY){
+    public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY){
         if((poginX != pogfinX) || (poginY != pogfinY)){
             System.out.println("Moviemnto permitido");
             return true;

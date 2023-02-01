@@ -12,7 +12,7 @@ public abstract class Peca {
     private boolean selected = false;
     private Tabuleiro tabuleiro;
     
-    public abstract boolean movimento(int poginX, int poginY, int pogfinX, int pogfinY);
+    public abstract boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY);
     
     //getters & setters
     
