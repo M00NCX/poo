@@ -3,5 +3,5 @@ package xadrezmod.PIECES;
 
 public interface MovimentosEspeciais {
     
-    public boolean primeiroMov(Color cor);
+    public boolean primeiroMov(int poginX, int pogfinX);
 }
