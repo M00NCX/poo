@@ -1,9 +1,9 @@
 
 package xadrezmod;
 
-import java.util.Timer; 
+import java.util.Timer; //olhar como usar a biblioteca
         
 public class Clock {
     
-    int tempoJog = 12;
+    int tempoJog = 120;
 }

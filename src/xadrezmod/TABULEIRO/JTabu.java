@@ -14,7 +14,7 @@ import xadrezmod.PIECES.Peca;
  * @author Dry
  */
 public class JTabu extends JPanel implements MouseListener{
-    private static final Dimension DIMENSAOTAB = new Dimension(660,660);
+    private static final Dimension DIMENSAOTAB = new Dimension(8*100,8*100);
     
     private final Tabuleiro tabuleiro;
 
@@ -26,7 +26,7 @@ public class JTabu extends JPanel implements MouseListener{
     public void desenhaTab(){       
         this.removeAll();
         this.setLayout(new GridLayout(8,8));
-        this.setSize(DIMENSAOTAB);
+        this.setPreferredSize(DIMENSAOTAB);
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
                 JCasa jCasa;
@@ -37,9 +37,9 @@ public class JTabu extends JPanel implements MouseListener{
                     jCasa = new JCasa(new JPeca(peca));
                 }
                 if((i+j)%2 == 0){
-                    jCasa.setBackground(Color.WHITE);
+                    jCasa.setBackground(Color.pink);
                 }else{
-                    jCasa.setBackground(Color.BLACK);
+                    jCasa.setBackground(Color.lightGray);
                 }
                 this.add(jCasa);
                 jCasa.addMouseListener(this);
@@ -55,25 +55,21 @@ public class JTabu extends JPanel implements MouseListener{
         this.tabuleiro.Jogada(jCasa.getI(), jCasa.getJ());
         this.desenhaTab();
     }
-
+    
     @Override
     public void mousePressed(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

@@ -1,18 +1,19 @@
 package xadrezmod.PIECES;
 
 public class Cavalo extends Peca {
-    
+    public static int count;
     public Cavalo (int pogX, int pogY, Color cor) {
+        Cavalo.count++;
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\xadrez-main\\src\\xadrezmod\\PIECES\\imgs\\cavalo"+cor+".png");
+        this.setImagem("C:\\Users\\adryelle.linhares\\Downloads\\CHESS\\CHESS\\XADREZcontador0802\\src\\xadrezmod\\PIECES\\imgs\\CAVALO"+cor+".png");
     }
     
     @Override
     public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY)
     {
-        if( ((poginX -pogfinX) == 1 && (poginY - pogfinY) ==2) || ((poginX - pogfinX)==2 && (poginY - pogfinY)==1) )
+        if( (Math.abs((poginX -pogfinX)) == 1 && Math.abs((poginY - pogfinY)) ==2) || (Math.abs((poginX - pogfinX))==2 && Math.abs((poginY - pogfinY))==1) )
         {
             System.out.println("Movimento permitido");
             return true;

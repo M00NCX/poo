@@ -2,17 +2,22 @@ package xadrezmod.PIECES;
 import static xadrezmod.PIECES.Color.*;
 
 public class Peao extends Peca implements MovimentosEspeciais{
-
+    public static int count;
     public Peao(int pogX, int pogY, Color cor){
+        Peao.count++;
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\xadrez-main\\src\\xadrezmod\\PIECES\\imgs\\PEAO"+cor+".png");
+        this.setImagem("C:\\Users\\adryelle.linhares\\Downloads\\CHESS\\CHESS\\XADREZcontador0802\\src\\xadrezmod\\PIECES\\imgs\\PEAO"+cor+".png");
+        //System.out.println(count);
     }
         
     @Override
     public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY){
-        if((poginY - pogfinY)==1){
+        int difY = Math.abs(pogfinY-poginY);        
+        int difX = Math.abs(pogfinX-poginX);
+
+        if((difX == 1) && (difY == 0)){
             System.out.println("Movimento permitido");
             return true;
         }else{
@@ -21,7 +26,7 @@ public class Peao extends Peca implements MovimentosEspeciais{
         }
     }
 
-    @Override
+   /* @Override
     public boolean primeiroMov(Color cor) {
         cor = this.getCor();
         if(this.movimentar(6, this.getPogY(), 4, this.getPogY())&&cor.equals(BLACK)){
@@ -31,5 +36,11 @@ public class Peao extends Peca implements MovimentosEspeciais{
             return true;
         }
         return false;
+        
+    }*/
+
+    @Override
+    public boolean primeiroMov(Color cor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

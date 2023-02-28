@@ -7,12 +7,17 @@ public abstract class Peca {
     Color cor;
     private int pogX;
     private int pogY;
-    private String imagem;
+    private String imagem; 
     private Movimentacao mov;
     private boolean selected = false;
     private Tabuleiro tabuleiro;
+    public static int cont = Bispo.count + Cavalo.count;
+
+    
     
     public abstract boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY);
+   
+    
     
     //getters & setters
     
@@ -97,5 +102,6 @@ public abstract class Peca {
     public void setTabuleiro(Tabuleiro tabuleiro) {
         this.tabuleiro = tabuleiro;
     }
+    
     
 }

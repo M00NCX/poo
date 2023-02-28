@@ -1,12 +1,13 @@
 package xadrezmod.PIECES;
 
 public class Torre extends Peca{   
-    
-    public Torre(int pogX, int pogY, Color cor) {//OUTRO CONSTRUTOR
+    public static int count;
+    public Torre(int pogX, int pogY, Color cor) {
+        Torre.count++;
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\xadrez-main\\src\\xadrezmod\\PIECES\\imgs\\TORRE"+cor+".png");
+        this.setImagem("C:\\Users\\adryelle.linhares\\Downloads\\CHESS\\CHESS\\XADREZcontador0802\\src\\xadrezmod\\PIECES\\imgs\\TORRE"+cor+".png");
     }
     
     @Override
@@ -23,4 +24,5 @@ public class Torre extends Peca{
             return false;
         }
     }
+
 }

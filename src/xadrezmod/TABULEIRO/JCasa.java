@@ -1,10 +1,16 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package xadrezmod.TABULEIRO;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.JPanel;
 
-
+/**
+ *
+ * @author Dry
+ */
 public class JCasa extends JPanel {
     
     private int i, j;
@@ -16,12 +22,13 @@ public class JCasa extends JPanel {
     }
     
     public JCasa(JPeca pecaJ){
+        this.setSize(100, 100);//tamanho da casa
         this.pecaJ = pecaJ;
         this.i=pecaJ.getPeca().getPogX();
         this.j =pecaJ.getPeca().getPogY();
         this.add(pecaJ);
         if((pecaJ.getPeca() != null)&& (pecaJ.getPeca().isSelected())){
-            this.setBorder(BorderFactory.createLineBorder(Color.YELLOW,4));
+            this.setBorder(BorderFactory.createLineBorder(Color.RED,2));
         }
     }
    
@@ -66,4 +73,5 @@ public class JCasa extends JPanel {
     public void setPecaJ(JPeca pecaJ) {
         this.pecaJ = pecaJ;
     }
+    
 }

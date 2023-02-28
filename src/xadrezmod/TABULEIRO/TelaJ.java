@@ -1,31 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package xadrezmod.TABULEIRO;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
+/**
+ *
+ * @author Dry
+ */
 public class TelaJ extends JFrame{
     
-    private static final Dimension DIMENSAOMIN = new Dimension(500,500);
-    private static final Dimension DIMENSAOMAX = new Dimension(700, 700);
+    private static final Dimension DIMENSAOMIN = new Dimension(600,600);
+    private static final Dimension DIMENSAOMAX = new Dimension(900, 900);
     
+    private static JLabel jogVez;
+    private Tabuleiro tabuleiro;
     
     public TelaJ(){
         setTitle("ChessMod Game");
-        this.add(new JTabu(new Tabuleiro()));
+        this.tabuleiro = new Tabuleiro();
+        this.add(new JTabu(tabuleiro), BorderLayout.CENTER);
+        
+        
+        JPanel painelT = new JPanel();
+        jogVez = new JLabel("Jogador atual: WHITE");
+        painelT.add(jogVez);
+        this.add(painelT, BorderLayout.NORTH);
+        
         this.setMinimumSize(DIMENSAOMIN);
         this.setMaximumSize(DIMENSAOMAX);
+        
         final JMenuBar tableMenuBar = new JMenuBar();
         barraMenu(tableMenuBar);
         this.setJMenuBar(tableMenuBar);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         this.pack();
         this.setLocationRelativeTo(null);
         this.setBounds(10,10,500,500);
         this.setMaximizedBounds(new Rectangle(700,700));
         this.setVisible(true);
     }
+    
+    public static void setJogVez(Enum jogV){
+        jogVez.setText("Jogador atual: " + jogV);
+    }
+    
     
     private void barraMenu(final JMenuBar tableMenuBar){
         tableMenuBar.add(createFileMenu());
@@ -70,7 +94,7 @@ public class TelaJ extends JFrame{
         }
         });
         fileMenu.add(sair);
-        
+      
         return fileMenu;      
     }
     

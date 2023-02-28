@@ -1,6 +1,6 @@
 package xadrezmod;
 
-public class Posicao { 
+public class Posicao { //posição dos eixo X e eixo Y
     private int origemX;
     private int origemY;
 

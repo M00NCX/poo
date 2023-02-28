@@ -1,5 +1,5 @@
-
 package xadrezmod.PIECES;
+
 
 public interface MovimentosEspeciais {
     

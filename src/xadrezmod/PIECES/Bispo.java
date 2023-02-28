@@ -1,23 +1,25 @@
 package xadrezmod.PIECES;
 
 public class Bispo extends Peca{
-       
+    
+    public static int count;
+    
     public Bispo (int pogX, int pogY, Color cor) {
+        Bispo.count++;
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\xadrez-main\\src\\xadrezmod\\PIECES\\imgs\\BISPO"+cor+".png");
+        this.setImagem("C:\\Users\\adryelle.linhares\\Downloads\\CHESS\\CHESS\\XADREZcontador0802\\src\\xadrezmod\\PIECES\\imgs\\BISPO"+cor+".png");
+        
     }
     
     @Override
     public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY)
     {
-        int difX = Math.abs(poginX-pogfinX);
-        int difY = Math.abs(poginY-pogfinY);
+        int difX = Math.abs(poginX - pogfinX);
+        int difY = Math.abs(poginY - pogfinY);
 
-        
-        if(difX==difY)
-        {
+        if(difX == difY){
             System.out.println("Movimento permitido");
             return true;
         }
