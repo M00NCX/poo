@@ -1,7 +1,7 @@
 package xadrezmod.PIECES;
 
 
-public class Rei extends Peca {
+public class Rei extends Peca implements MovimentosEspeciais {
     public static int count;
     public Rei(int pogX, int pogY, Color cor){
         Rei.count++;
@@ -13,13 +13,20 @@ public class Rei extends Peca {
     
     @Override
     public boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY){
-        if((poginX - pogfinX)==1 || (poginY - pogfinY) == 1){
+        int difX = Math.abs(poginX - pogfinX);
+        int difY = Math.abs(poginY - pogfinY);
+        if(difX==1 || difY == 1){
             System.out.println("Moviemnto permitido");
             return true;
         }else{
             System.out.println("Movimento ILEGAL");
             return false;
         }
+    }
+
+    @Override
+    public boolean primeiroMov(int poginX, int pogfinX) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

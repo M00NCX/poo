@@ -11,13 +11,9 @@ public abstract class Peca {
     private Movimentacao mov;
     private boolean selected = false;
     private Tabuleiro tabuleiro;
-    public static int cont = Bispo.count + Cavalo.count;
 
-    
-    
     public abstract boolean movimentar(int poginX, int poginY, int pogfinX, int pogfinY);
    
-    
     
     //getters & setters
     

@@ -1,7 +1,7 @@
 
 package xadrezmod;
 
-import java.util.Timer; //olhar como usar a biblioteca
+import java.util.Timer;
         
 public class Clock {
     

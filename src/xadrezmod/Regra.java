@@ -12,7 +12,7 @@ package xadrezmod;
 public class Regra {
     private Posicao origem;
     private Posicao destino;
-    int direcao; //qual o intuito?
+    int direcao; 
     int sentido;
 
     /**

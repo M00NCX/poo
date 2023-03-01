@@ -87,11 +87,6 @@ public final class Tabuleiro
         this.adiconaPeca(peaoB7);
     }
     
-  public void contador(){
-      int cont = 0;
-      cont = Cavalo.count+Bispo.count+Peao.count+Rainha.count+Rei.count+Torre.count;
-      System.out.print(cont);
-  }
     
   public Peca getEnd(int linha, int coluna){
       return this.end[linha][coluna];      
@@ -102,7 +97,7 @@ public final class Tabuleiro
       peca.setTabuleiro(this);
   }
     
-  public void selected(Peca peca){//clicando na peça
+  public void selected(Peca peca){
       if(peca.isSelected()){
           peca.setSelected(false);
           this.selecionada = null;
@@ -124,7 +119,7 @@ public final class Tabuleiro
       peca.setTabuleiro(this);  
   }
   
- public void playerT(){//mudando de jogador
+ public void playerT(){
      if(this.jogadorDaVez.equals(Color.WHITE)){
          this.jogadorDaVez = Color.BLACK; 
      }else{
@@ -140,7 +135,7 @@ public final class Tabuleiro
         return end;
     }
     
-    public void movimentando(Peca peca, int iPos, int jPos) { //COMENTAR AQUI!!!!!!!!!!!!!!!!!
+    public void movimentando(Peca peca, int iPos, int jPos) {
         if(peca.movimentar(peca.getPogX(), peca.getPogY(), iPos, jPos)){
             this.end[peca.getPogX()][peca.getPogY()] = null;
             peca.setPogX(iPos);
@@ -152,15 +147,15 @@ public final class Tabuleiro
         
     }
 
-    public void Jogada(int i, int j) { //COMENTAR AQUI!!!!!!!!!!!!!!!!!
+    public void Jogada(int i, int j) { 
         Peca peca = this.getEnd(i, j);
         if(this.selecionada == null){
-            if(peca !=null && peca.getCor().equals(this.jogadorDaVez)){//inicialmente só o branco clica
-                this.selected(peca);//seleciona a peca e coloca a borda
+            if(peca !=null && peca.getCor().equals(this.jogadorDaVez)){
+                this.selected(peca);
             }   
         }else{
             if(this.selecionada == peca){
-                this.selected(peca);//chama o método novamente para desfazer a seleção
+                this.selected(peca);
             }else{
                 if(peca == null || !peca.getCor().equals(this.selecionada.getCor())){
                     this.movimentando(this.selecionada, i, j);
@@ -168,71 +163,6 @@ public final class Tabuleiro
             }
         }
     }
-    
-      /*public boolean checkEnd( int xi, int yi, int xf, int yf)
-  {
-     if(this.end[xf][yf].isOcupado() == false){
-         System.out.println("Movimento permitido");
-         return true;
-     }
-     else
-     {
-         if(this.end[xi][yi].get.getCor() == this.end[xf][yf].getPeca().getCor())
-         {
-             System.out.println("Tentando comer o amigo??????????");
-             return false;
-         }else{
-             System.out.println("Vc capturou uma peca inimiga!");
-             return true;
-         }
-     }
-    }*/
-
-    
-
-    /**
-     */
-    /*public void setEnd(Peca peca, boolean ocup) 
-    {
-        this.end[peca.getPogX()][peca.getPogY()].setPeca(peca);
-        this.end[peca.getPogX()][peca.getPogY()].setOcupado(ocup);
-    }*/
-      
-    
+       
   
 }    
-
-   /* public static Tabuleiro tabuleiro = new Tabuleiro ();
-    int [][]square = new int[8][8]; //criação da matriz
-    char a = 65; //letra a em ASCII
-    char h = 72; //letra h
-    public void printTab(){
-        System.out.print("#  ");
-        for(int c=0 ; c<8 ; c++){
-                System.out.printf("%c  ", a); //printar as letras na parte superior
-                a++;
-        }
-        System.out.println("");
-    
-        for(int i=0 ; i<8 ; i++){
-                System.out.print((i+1)+" "); //printar os numeros na lateral esquerda
-                for(int j=0 ; j<8 ; j++){				
-                        System.out.print("[" + square[i][j] + "]");				
-                        if(j == 7){					
-                                System.out.println(""); //"quebrar a matriz"
-                        }				
-                }
-        }
-        System.out.print("#  ");
-        for(int b=0 ; b<8 ; b++){
-                System.out.printf("%c  ", h);//printar as letras na parte inferior
-                h--;
-        }
-        System.out.println("");
-    }
-    
-    //printar os numeros na lateral direita
-
-    public static void main(String [] args){			
-        tabuleiro.printTab();	
-    }*/

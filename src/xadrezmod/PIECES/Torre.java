@@ -1,6 +1,6 @@
 package xadrezmod.PIECES;
 
-public class Torre extends Peca{   
+public class Torre extends Peca implements MovimentosEspeciais{   
     public static int count;
     public Torre(int pogX, int pogY, Color cor) {
         Torre.count++;
@@ -23,6 +23,11 @@ public class Torre extends Peca{
             System.out.println("Movimento ILEGAL");
             return false;
         }
+    }
+
+    @Override
+    public boolean primeiroMov(int poginX, int pogfinX) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }
