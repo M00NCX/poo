@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# poo
-=======
-# poo
+# PROGRAMAÇÃO ORIENTADA À OBJETOS
 
-##Apresentação de POO - Xadrez
->>>>>>> 03cf44a235e31470bcf2acf108d96153ef346acf
+## Jogo em Desenvolvimento
+
+##### Aviso: ao baixar o jogo deve-se alterar o caminho da imagem das classes {PEAO, TORRE, CAVALO, BISPO, REI, RAINHA}, uma vez que essas se encontram de maneira local.
