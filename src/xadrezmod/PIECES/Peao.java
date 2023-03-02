@@ -7,7 +7,7 @@ public class Peao extends Peca implements MovimentosEspeciais{
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\APRESENTACAO\\src\\xadrezmod\\PIECES\\imgs\\PEAO"+cor+".png");
+        this.setImagem("PEAO"+cor+".png");
         //System.out.println(count);
     }
         
