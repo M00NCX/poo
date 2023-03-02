@@ -8,7 +8,7 @@ public class Rei extends Peca implements MovimentosEspeciais {
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\APRESENTACAO\\src\\xadrezmod\\PIECES\\imgs\\REI"+cor+".png");
+        this.setImagem("REI"+cor+".png");
     }
     
     @Override
