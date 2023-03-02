@@ -7,7 +7,7 @@ public class Torre extends Peca implements MovimentosEspeciais{
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\APRESENTACAO\\src\\xadrezmod\\PIECES\\imgs\\TORRE"+cor+".png");
+        this.setImagem("TORRE"+cor+".png");
     }
     
     @Override
