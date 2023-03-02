@@ -7,6 +7,11 @@ import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 import xadrezmod.PIECES.*;
 import javax.swing.*;
@@ -20,13 +25,18 @@ public class JPeca extends JLabel{
 
     public JPeca(Peca peca) {
 
-        this.peca = peca;
-        String fig = peca.getImagem();
-        ImageIcon icon = new ImageIcon(fig);
-        Image img = icon.getImage();
-        Image nova = img.getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH);
-        icon = new ImageIcon(nova);
-        this.setIcon(icon);     
+        try {
+            this.peca = peca;
+            String fig = peca.getImagem();
+            InputStream stream = JPeca.class.getResourceAsStream("imgs/"+fig);
+            ImageIcon icon = new ImageIcon(ImageIO.read(stream));
+            Image img = icon.getImage();
+            Image nova = img.getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH);
+            icon = new ImageIcon(nova);     
+            this.setIcon(icon);
+        } catch (IOException ex) {
+            Logger.getLogger(JPeca.class.getName()).log(Level.SEVERE, null, ex);
+        }
       }
     
     public Peca getPeca() {
@@ -41,3 +51,4 @@ public class JPeca extends JLabel{
         this.peca = peca;
     }
 }
+
