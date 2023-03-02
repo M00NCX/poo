@@ -7,7 +7,7 @@ public class Cavalo extends Peca {
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\APRESENTACAO\\src\\xadrezmod\\PIECES\\imgs\\CAVALO"+cor+".png");
+        this.setImagem("CAVALO"+cor+".png");
     }
     
     @Override
