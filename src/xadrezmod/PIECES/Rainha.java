@@ -7,7 +7,7 @@ public class Rainha extends Peca{
         this.setPogX(pogX);
         this.setPogY(pogY);
         this.setColor(cor);
-        this.setImagem("C:\\Users\\dry_2\\OneDrive\\Documents\\CHESS\\APRESENTACAO\\src\\xadrezmod\\PIECES\\imgs\\RAINHA"+cor+".png");
+        this.setImagem("RAINHA"+cor+".png");
         }
     
         @Override
